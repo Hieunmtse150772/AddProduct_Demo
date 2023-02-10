@@ -11,7 +11,7 @@ import android.widget.EditText;
 import com.example.addproduct_demo.Model.Product;
 import com.example.addproduct_demo.R;
 
-public class AddProductAcitvity2 extends AppCompatActivity {
+public class AddProductAcitvity extends AppCompatActivity {
     private EditText productID;
     private EditText productName;
     private EditText quantity;
@@ -21,7 +21,7 @@ public class AddProductAcitvity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_product2);
+        setContentView(R.layout.activity_add_product_layout);
         productID = findViewById(R.id.productID);
         productName = findViewById(R.id.productName);
         quantity = findViewById(R.id.quantity);
@@ -37,9 +37,9 @@ public class AddProductAcitvity2 extends AppCompatActivity {
         });
     }
     private void openProductList(EditText productID, EditText productName, EditText quantity, EditText price, EditText maker){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, ProductListActivity.class);
         Product product = new Product(productID.getText().toString(), productName.getText().toString(),
-                quantity.getText().toString(), price.getText().toString(), maker.getText().toString());
+                Integer.parseInt(quantity.getText().toString()), Integer.parseInt(price.getText().toString()), maker.getText().toString());
         intent.putExtra("product", product);
         startActivity(intent);
     }
