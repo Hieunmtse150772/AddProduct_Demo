@@ -56,7 +56,7 @@ public class ProductListAdapter extends BaseAdapter {
         holder.productIDView.setText("Product ID: " + product.getProductID());
         holder.productNameView.setText("ProductName: " + product.getName());
         holder.quantityView.setText("Quantity: " + product.getQuantity());
-        holder.quantityView.setText("Price: " + product.getPrice());
+        holder.priceView.setText("Price: " + product.getPrice());
         holder.makerView.setText("Maker: " + product.getMaker());
         return convertView;
     }

@@ -31,7 +31,6 @@ public class AddProductAcitvity extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("adaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
                 openProductList(productID, productName, quantity, price, maker);
             }
         });
